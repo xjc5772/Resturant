@@ -1,0 +1,45 @@
+body {
+	flex-wrap:wrap;
+	flex:1
+}
+.flex {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.demo {
+	position:relative;
+	background:linear-gradient(90deg,#feac5e,#c779d0,#4bc0c8);
+	color:#fff;
+	font-size:30px;
+}
+.circle {
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	position:relative;
+	background:linear-gradient(90deg,#feac5e,#c779d0,#4bc0c8);
+	color:#fff;
+}
+.circle:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	margin:-6px;
+	border:5px solid transparent;
+	border-top:5px solid #f64f59;
+	border-radius:50%;
+	transform:rotate(45deg);
+	animation:circleRotate 3s linear infinite;
+}
+@keyframes circleRotate {
+	0% {
+	transform:rotate(0);
+}
+100% {
+	transform:rotate(360deg);
+}
+}
